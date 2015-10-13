@@ -1,44 +1,16 @@
-module.exports = function(grunt){
+module.exports = function(grunt) {
 
-	var SRC = "src/",
-		BUILD = "build/" 
+	var path = require('path');
 
-	grunt.initConfig({
+	require('load-grunt-config')(grunt, {
 
-		assemble: {
-			options: {
-				flatten: true,
-				layoutdir: 'src/template/layouts/', 
-				layout: 'default.hbs',
-				data: 'src/data/**/*.json',
-				partials: 'src/template/partials/*.hbs'
-			},
-			site: {
-				files: {
-					'build/': ['src/template/pages/*.hbs']
-				}
-			}
+		configPath: path.join(process.cwd(), 'grunt/config'),
+		jitGrunt: {
+			customTasksDir: 'grunt/tasks'
 		},
-
-		compass: {
-			build: {
-				options: {
-					sassDir: SRC + 'sass/',
-					cssDir: BUILD + 'css/',
-					require: 'susy',
-					environment: 'development'
-				}
-			}
+		data: {
+			SRC: 'src/',
+			BUILD: 'build/'
 		}
-
 	});
-
-	grunt.loadNpmTasks('assemble');
-	grunt.loadNpmTasks('grunt-contrib-compass');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-
-	grunt.registerTask('default', [
-		'assemble', 
-		'compass'
-	]);
 };
