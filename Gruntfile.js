@@ -35,6 +35,10 @@ module.exports = function(grunt){
 
 	grunt.loadNpmTasks('assemble');
 	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['assemble', 'compass']);
+	grunt.registerTask('default', [
+		'assemble', 
+		'compass'
+	]);
 };
