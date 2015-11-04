@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 	grunt.registerTask('default', [
 		'assemble', 
-		'compass'
+		'compass',
+		'watch'
 	]);
 };
