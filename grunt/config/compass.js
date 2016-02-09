@@ -1,8 +1,8 @@
 module.exports = {
 	build: {
 		options: {
-			sassDir: '<%= SRC %>sass/',
-			cssDir: '<%= BUILD %>css/',
+			sassDir: '<%= src %>sass/',
+			cssDir: '<%= build %>css/',
 			require: 'susy',
 			environment: 'development'
 		}

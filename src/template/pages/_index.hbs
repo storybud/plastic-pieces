@@ -1,0 +1,34 @@
+---
+title: The home page
+post: true
+---
+
+
+<div>
+  <ul>
+{{!--   {{#post}}
+  
+    {{#each pages }}
+    <li>{{ this.data.title }}</li>
+    {{/each}}
+  
+  {{/post}} --}}
+
+  {{#post}}
+    <li>{{ title }}</li>
+  {{/post}}
+
+</ul>
+
+{{#each post}}
+  <ul>
+    {{!-- {{#each pages}} --}}
+      <li>{{data.title}}</li>
+    {{!-- {{/each}} --}}
+  </ul>
+{{/each}}
+</div>
+
+
+
+

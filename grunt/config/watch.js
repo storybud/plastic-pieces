@@ -1,6 +1,6 @@
 module.exports = {
 	assemble: {
-		files: 'src/template/**/*.hbs',
+		files: '<%= template %>**/*.hbs',
 		tasks: 'assemble'
 	},
 	sass: {

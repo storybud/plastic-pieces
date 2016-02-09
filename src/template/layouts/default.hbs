@@ -2,12 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>{{title}}</title>
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	{{>header }}
-	{{>body }}
+	{{#markdown}}
+
+		# {{title}}
+
+		{{#if created}}
+			*Posted: {{created}}
+			{{#if updated}}
+				<br>Updated: {{updated}}
+			{{/if}}*
+		{{/if}}
+
+		{{>body }}
+	{{/markdown}}
 </body>
 </html>

@@ -8,8 +8,10 @@ module.exports = function(grunt) {
 			customTasksDir: 'grunt/tasks'
 		},
 		data: {
-			SRC: 'src/',
-			BUILD: 'build/'
+			src: 'src/',
+			template: 'src/template/',
+			data: 'src/data/',
+			build: 'build/'
 		}
 	});
 };
