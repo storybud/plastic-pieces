@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>{{title}}</title>
+{{>header }}
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-	{{>header }}
-	{{#markdown}}
+{{#markdown}}
 
-		# {{title}}
+# {{title}}
 
-		{{#if created}}
-			*Posted: {{created}}
-			{{#if updated}}
-				<br>Updated: {{updated}}
-			{{/if}}*
-		{{/if}}
+{{#if created}}
+*Posted: {{created}}
+{{#if updated}}
+<br>Updated: {{updated}}
+{{/if}}
+{{/if}}
 
-		{{>body }}
-	{{/markdown}}
-</body>
-</html>
+{{>body }}
+{{/markdown}}
+
+{{>footer }}

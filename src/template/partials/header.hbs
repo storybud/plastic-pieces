@@ -1,5 +1,21 @@
-<header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{title}}</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<nav>
 	<ul>
-		<li>Home</li>
+		{{#withSort pages "data.created" dir="desc"}}
+		    {{#if data.exclude}}
+		        <li>
+		            <a href="./{{basename}}.html">{{basename}}</a>
+		        </li>
+		    {{/if}}
+		{{/withSort}}
 	</ul>
-</header>
+</nav>

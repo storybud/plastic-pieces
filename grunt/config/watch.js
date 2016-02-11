@@ -1,6 +1,6 @@
 module.exports = {
 	assemble: {
-		files: '<%= template %>**/*.hbs',
+		files: '<%= template %>**/*{.hbs, .md}',
 		tasks: 'assemble'
 	},
 	sass: {
